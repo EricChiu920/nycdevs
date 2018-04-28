@@ -8,14 +8,6 @@
   --color-dark-gray-2: #7f8c8d;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  padding: 0;
-  margin: 0;
-} 
-
 html {
   font-size: 62.5%; /* 10px this makes using em's easier */
 }
@@ -40,4 +32,14 @@ h2 {
   text-align: center;
   font-size: 4rem;
   margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 3rem;
+  font-size: lighter;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.8rem;
 }
