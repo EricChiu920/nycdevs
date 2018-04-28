@@ -16,7 +16,7 @@ const landing = () => {
         </div>
         <div className="row">
           <div className="col-md-6 mx-auto">
-            <h1 className={classes.Hero__cta}>Fast <b style={styles}>free</b> wifi and <b style={styles}>secure</b> wifi near you.</h1>
+            <h1 className={classes.Hero__cta}>Fast <b style={styles}>free</b> and <b style={styles}>secure</b> wifi near you.</h1>
             <div className="input-group mb-3 input-group-lg">
               <input type="text" className="form-control " placeholder="Enter your zipcode..." style={{fontSize: '2rem'}} />
               <div className="input-group-append">
