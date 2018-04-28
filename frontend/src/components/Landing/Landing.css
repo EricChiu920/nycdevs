@@ -1,5 +1,19 @@
 .Hero {
+  padding-top: 1rem;
   height: 90vh;
   width: 100%;
-  background-image: linear-gradient(to bottom right, var(--color-primary), var(--color-secondary));
+  /* background-image: linear-gradient(to bottom right, var(--color-secondary), var(--color-primary)); */
+  background-image: 
+      linear-gradient(to bottom right, rgba(0,0,0, .5), rgba(0,0,0, .5)),
+      url(../../assets/images/hero.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.Logo__text {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 8rem;
+  color: white;
+  text-align: center;
+  display: block;
 }
