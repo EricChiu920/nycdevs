@@ -4,7 +4,6 @@ import classes from './Landing.css';
 const landing = () => {
   const styles = {
     color: 'var(--color-primary)',
-    fontWeight: '300',
     lineHeight: 1.4
   }
 
