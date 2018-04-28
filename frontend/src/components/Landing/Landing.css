@@ -1,19 +1,43 @@
 .Hero {
   padding-top: 1rem;
-  height: 90vh;
+  height: 80vh;
   width: 100%;
   /* background-image: linear-gradient(to bottom right, var(--color-secondary), var(--color-primary)); */
   background-image: 
-      linear-gradient(to bottom right, rgba(0,0,0, .5), rgba(0,0,0, .5)),
+      linear-gradient(to bottom right, rgba(0,0,0, .6), rgba(0,0,0, .6)),
       url(../../assets/images/hero.jpg);
   background-size: cover;
   background-position: center center;
+  color: white;
 }
 
 .Logo__text {
   font-family: 'Abril Fatface', cursive;
-  font-size: 8rem;
-  color: white;
+  font-size: 5rem;
   text-align: center;
   display: block;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  padding-bottom: 5rem;
+}
+
+.Hero__cta {
+  text-align: center;
+  font-size: 5rem;
+  color: white;
+  line-height: 1.1;
+  font-weight: 300;
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+}
+
+.Hero input.form-control {
+  font-size: 2rem !important;
+  border-radius: 15px;
+}
+
+.Lead {
+  font-size: 2rem;
+  max-width: 50rem;
+  display: block;
+  margin: 0 auto;
 }
