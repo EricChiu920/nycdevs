@@ -1,0 +1,5 @@
+.Hero {
+  height: 90vh;
+  width: 100%;
+  background-image: linear-gradient(to bottom right, var(--color-primary), var(--color-secondary));
+}
