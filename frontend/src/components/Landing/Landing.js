@@ -17,11 +17,11 @@ const landing = () => {
         </div>
         <div className="row">
           <div className="col-md-6 mx-auto">
-            <h1 className={classes.Hero__cta}>Fast <b style={styles}>free</b> wifi and <b style={styles}>secure</b> wifi near you.</h1>            
-            <div class="input-group mb-3 input-group-lg">
-              <input type="text" class="form-control " placeholder="Enter your zipcode..." style={{fontSize: '2rem'}} />
-              <div class="input-group-append">
-                <button class="btn btn-info" type="button"><i style={{fontSize: '2rem'}} class="fas fa-search"></i></button>
+            <h1 className={classes.Hero__cta}>Fast <b style={styles}>free</b> wifi and <b style={styles}>secure</b> wifi near you.</h1>
+            <div className="input-group mb-3 input-group-lg">
+              <input type="text" className="form-control " placeholder="Enter your zipcode..." style={{fontSize: '2rem'}} />
+              <div className="input-group-append">
+                <button className="btn btn-info" type="button"><i style={{fontSize: '2rem'}} className="fas fa-search"></i></button>
               </div>
             </div>
           </div>
