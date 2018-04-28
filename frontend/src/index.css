@@ -1,3 +1,13 @@
+/* CSS VARIABLES */
+:root {
+  --color-primary: #3498db;
+  --color-secondary: #2980b9;
+  --color-light-gray-1: #ecf0f1;
+  --color-light-gray-2: #bdc3c7;
+  --color-dark-gray-1: #95a5a6;
+  --color-dark-gray-2: #7f8c8d;
+}
+
 body {
   margin: 0;
   padding: 0;
