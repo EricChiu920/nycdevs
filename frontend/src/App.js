@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Landing from './components/Landing/Landing';
+import RoutePaths from './RoutePaths/RoutePaths';
 import axios from 'axios';
 
 axios.get('https://data.cityofnewyork.us/resource/24t3-xqyv.json?zip=11214')
@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Landing />
+        <RoutePaths />
       </React.Fragment>
     );
   }
