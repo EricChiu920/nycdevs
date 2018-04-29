@@ -1,9 +1,34 @@
 import React from 'react';
 import classes from './Landing.css';
+import axios from 'axios';
 
 import SubmitButton from './SubmitButton/SubmitButton';
 
-const landing = () => {
+const landing = (props) => {
+
+  const onSubmit = (e) => {
+    if (e.keyCode === 13 || e.which === 13) {
+      getApiData();
+    }
+  }
+
+  const handleSubmitClick = () => {
+    getApiData();
+  }
+
+  const getApiData = () => {
+    axios.get(`https://data.cityofnewyork.us/resource/24t3-xqyv.json?zip=${props.zipcode}`)
+      .then(response => {
+        const results = response.data.filter(data => data.type === "Free")
+          .map(item => item.location_lat_long.coordinates);
+        console.log(results);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  }
+  
+
   const styles = {
     color: 'var(--color-primary)',
     lineHeight: 1.4
@@ -19,7 +44,8 @@ const landing = () => {
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: '50%',
-    marginBottom: '3rem'
+    marginBottom: '3rem',
+    margin: '2rem 0 5rem 0'
   }
 
   return (
@@ -33,9 +59,15 @@ const landing = () => {
           <div className="col-md-6 mx-auto">
             <h1 className={classes.Hero__cta}>Fast <b style={styles}>free</b> and <b style={styles}>secure</b> wifi near you.</h1>
             <div className="input-group mb-3 input-group-lg">
-              <input type="text" className="form-control " placeholder="Enter your zipcode..." style={{fontSize: '2rem'}} />
+              <input 
+                type="text" 
+                className="form-control" 
+                placeholder="Enter your zipcode..." 
+                style={{fontSize: '2rem'}} 
+                onChange={props.changeZipCode}
+                onKeyPress={onSubmit}/>
               <div className="input-group-append">
-                <SubmitButton />
+                <SubmitButton handleSubmitClick={handleSubmitClick}/>
               </div>
             </div>
           </div>
@@ -52,7 +84,7 @@ const landing = () => {
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="container pt-5">
         <div className="row">
           <div className="col-lg-4">
             <i style={iconStyles} className="fas fa-wifi"></i>
