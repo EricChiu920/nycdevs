@@ -1,8 +1,12 @@
 import React from 'react'
 
-const submitButton = () => {
+const submitButton = (props) => {
+
   return (
-    <button className="btn btn-info" type="button"><i style={{fontSize: '2rem'}} className="fas fa-search"></i></button>
+    <button 
+      className="btn btn-info" 
+      type="button"
+      onClick={props.handleSubmitClick}><i style={{fontSize: '2rem'}} className="fas fa-search" ></i></button>
   )
 }
 
